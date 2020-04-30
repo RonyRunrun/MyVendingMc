@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         val tstokoreo = findViewById<TextView>(R.id.stkoreo)
         val tstoktango = findViewById<TextView>(R.id.stktango)
         val tstokcokelat = findViewById<TextView>(R.id.stkcokelat)
+        val tsaldo = findViewById<TextView>(R.id.textView3)
         var statnom = "0"
         var stokbis : Int = 5
         var stokchips : Int = 8
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         var stoktango : Int = 4
         var stokcokelat : Int = 1
         val builder = AlertDialog.Builder(this)
+        var lastsaldo : Int = 0
 
         tstokbis.setText(stokbis.toString())
         tstokchips.setText(stokchips.toString())
@@ -43,6 +45,8 @@ class MainActivity : AppCompatActivity() {
 
         builder.setTitle("Vending Rules")
         builder.setMessage(" -Masukkan nominal Uang" +
+                "\n -Klik BAYAR untuk menambah saldo atau uang"+
+                "\n -Pastikan Uang atau Saldo mencukupi"+
                 "\n -Pilih makanan"+
                 "\n -Ambil makanan dan kembalian")
         //builder.setPositiveButton("OK", DialogInterface.OnClickListener(function = x))
@@ -82,8 +86,12 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "masukkan uang terlebih dahulu!", Toast.LENGTH_SHORT)
                 .show()
             } else {
-                val strnom  = nomuang.text.toString()
-                val nomku = strnom.toInt()
+                var strsalnow = tsaldo.text.toString()
+                var salnow = strsalnow.toInt()
+                var strnom  = nomuang.text.toString()
+                var nomku = strnom.toInt()
+                lastsaldo = salnow + nomku
+                tsaldo.setText(lastsaldo.toString())
             }
         }
 
@@ -101,7 +109,7 @@ class MainActivity : AppCompatActivity() {
                     val hargabis: Int = 6000
                     val strnom = nomuang.text.toString()
                     val nomku = strnom.toInt()
-                    val kembalian = nomku - hargabis
+                    val kembalian = lastsaldo - hargabis
 
                     if (kembalian < 0) {
                         Toast.makeText(
@@ -154,7 +162,7 @@ class MainActivity : AppCompatActivity() {
                     val hargachips: Int = 8000
                     val strnom = nomuang.text.toString()
                     val nomku = strnom.toInt()
-                    val kembalian = nomku - hargachips
+                    val kembalian = lastsaldo - hargachips
 
                     if (kembalian < 0) {
                         Toast.makeText(
@@ -206,7 +214,7 @@ class MainActivity : AppCompatActivity() {
                     val hargaoreo: Int = 10000
                     val strnom = nomuang.text.toString()
                     val nomku = strnom.toInt()
-                    val kembalian = nomku - hargaoreo
+                    val kembalian = lastsaldo - hargaoreo
 
                     if (kembalian < 0) {
                         Toast.makeText(
@@ -258,7 +266,7 @@ class MainActivity : AppCompatActivity() {
                     val hargatango: Int = 12000
                     val strnom = nomuang.text.toString()
                     val nomku = strnom.toInt()
-                    val kembalian = nomku - hargatango
+                    val kembalian = lastsaldo - hargatango
 
                     if (kembalian < 0) {
                         Toast.makeText(
@@ -310,7 +318,7 @@ class MainActivity : AppCompatActivity() {
                     val hargacokelat: Int = 15000
                     val strnom = nomuang.text.toString()
                     val nomku = strnom.toInt()
-                    val kembalian = nomku - hargacokelat
+                    val kembalian = lastsaldo - hargacokelat
 
                     if (kembalian < 0) {
                         Toast.makeText(
