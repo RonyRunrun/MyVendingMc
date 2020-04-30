@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/stkbis"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/button"
+        android:layout_marginTop="10dp"
+        android:text=" 0 "
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biskuit"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/hrgbis"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_marginLeft="25dp"
+        android:textAlignment="center"
+        android:text="Rp 6000" />
+
+    <TextView
+        android:id="@+id/stkchips"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/button2"
+        android:layout_marginTop="10dp"
+        android:text=" 0 "
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chips"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/hrgchips"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button2"
+        android:layout_alignStart="@id/button2"
+        android:text="Rp 8000"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/stkoreo"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/button3"
+        android:layout_marginTop="10dp"
+        android:text=" 0 "
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oreo"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/hrgoreo"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button3"
+        android:layout_alignStart="@id/button3"
+        android:textAlignment="center"
+        android:text="Rp 10000" />
+
+    <TextView
+        android:id="@+id/stktango"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/button4"
+        android:layout_marginTop="110dp"
+        android:text=" 0 "
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tango"
+        android:layout_toStartOf="@id/button2"
+        android:layout_marginTop="130dp"/>
+
+    <TextView
+        android:id="@+id/hrgtango"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button4"
+        android:layout_alignStart="@id/button4"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:text="Rp 12000" />
+
+    <TextView
+        android:id="@+id/stkcokelat"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/button5"
+        android:layout_marginTop="110dp"
+        android:text=" 0 "
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cokelat"
+        android:layout_toEndOf="@id/button2"
+        android:layout_marginTop="130dp" />
+
+    <TextView
+        android:id="@+id/hrgcokelat"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button5"
+        android:layout_alignStart="@id/button5"
+        android:textAlignment="center"
+        android:text="Rp 15000" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan Nominal Uang :"
+        android:layout_below="@id/button5"
+        android:textSize="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*nominal yang diproses 2000,5000,10000,20000,50000"
+        android:textSize="11dp"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Nominal Uang"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Bayar" />
+
+
+</RelativeLayout>
