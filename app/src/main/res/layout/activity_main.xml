@@ -176,6 +176,7 @@
         android:layout_below="@id/editText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:visibility="invisible"
         android:text="Bayar" />
 
 
